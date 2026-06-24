@@ -250,7 +250,12 @@ document.querySelectorAll('.addTodoBtn').forEach(btn=>{
 document.querySelectorAll('.editCategoryBtn').forEach(btn=>{
 
     btn.onclick=function(){
-
+        if(btn.innerText=='Edit'){
+            btn.innerText='Cancel';
+        }
+        else{
+            btn.innerText='Edit';
+        }
         let card=btn.closest('.card');
 
         card.querySelector('.category-name').classList.toggle('d-none');
@@ -264,7 +269,12 @@ document.querySelectorAll('.editCategoryBtn').forEach(btn=>{
 document.querySelectorAll('.editTodoBtn').forEach(btn=>{
 
     btn.onclick=function(){
-
+        if(btn.innerText=='Edit'){
+            btn.innerText='Cancel';
+        }
+        else{
+            btn.innerText='Edit';
+        }
         let box=btn.closest('.border');
 
         box.querySelector('.todo-title').classList.toggle('d-none');
